@@ -1,0 +1,215 @@
+{
+  "resource": {
+    "attributes": [
+      {
+        "key": "service.name",
+        "value": {
+          "stringValue": "grafana-transfer-demo"
+        }
+      },
+      {
+        "key": "deployment.environment",
+        "value": {
+          "stringValue": "development"
+        }
+      },
+      {
+        "key": "source.system",
+        "value": {
+          "stringValue": "sample-json-for-ingestion-test"
+        }
+      }
+    ]
+  },
+  "metrics": {
+    "resourceMetrics": [
+      {
+        "resource": {
+          "attributes": [
+            {
+              "key": "service.name",
+              "value": {
+                "stringValue": "grafana-transfer-demo"
+              }
+            },
+            {
+              "key": "deployment.environment",
+              "value": {
+                "stringValue": "development"
+              }
+            }
+          ]
+        },
+        "scopeMetrics": [
+          {
+            "scope": {
+              "name": "grafana-transfer-vscode"
+            },
+            "metrics": [
+              {
+                "name": "demo_orders_processed",
+                "description": "Number of orders processed in the demo dataset",
+                "unit": "{order}",
+                "sum": {
+                  "aggregationTemporality": 2,
+                  "isMonotonic": true,
+                  "dataPoints": [
+                    {
+                      "attributes": [
+                        {
+                          "key": "pipeline",
+                          "value": {
+                            "stringValue": "order_enrichment"
+                          }
+                        }
+                      ],
+                      "startTimeUnixNano": "1793022458171789223",
+                      "timeUnixNano": "1793022518171789223",
+                      "asInt": "12"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "demo_processing_duration_ms",
+                "description": "Example processing duration",
+                "unit": "ms",
+                "gauge": {
+                  "dataPoints": [
+                    {
+                      "attributes": [
+                        {
+                          "key": "pipeline",
+                          "value": {
+                            "stringValue": "order_enrichment"
+                          }
+                        }
+                      ],
+                      "timeUnixNano": "1793022518171789223",
+                      "asDouble": 42.7
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logs": {
+    "resourceLogs": [
+      {
+        "resource": {
+          "attributes": [
+            {
+              "key": "service.name",
+              "value": {
+                "stringValue": "grafana-transfer-demo"
+              }
+            },
+            {
+              "key": "deployment.environment",
+              "value": {
+                "stringValue": "development"
+              }
+            }
+          ]
+        },
+        "scopeLogs": [
+          {
+            "scope": {
+              "name": "grafana-transfer-vscode"
+            },
+            "logRecords": [
+              {
+                "timeUnixNano": "1793022518171789223",
+                "severityNumber": 9,
+                "severityText": "INFO",
+                "body": {
+                  "stringValue": "Demo telemetry record: order enrichment completed"
+                },
+                "attributes": [
+                  {
+                    "key": "pipeline",
+                    "value": {
+                      "stringValue": "order_enrichment"
+                    }
+                  },
+                  {
+                    "key": "records_processed",
+                    "value": {
+                      "intValue": "12"
+                    }
+                  },
+                  {
+                    "key": "source",
+                    "value": {
+                      "stringValue": "sample-json-for-ingestion-test"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "traces": {
+    "resourceSpans": [
+      {
+        "resource": {
+          "attributes": [
+            {
+              "key": "service.name",
+              "value": {
+                "stringValue": "grafana-transfer-demo"
+              }
+            },
+            {
+              "key": "deployment.environment",
+              "value": {
+                "stringValue": "development"
+              }
+            }
+          ]
+        },
+        "scopeSpans": [
+          {
+            "scope": {
+              "name": "grafana-transfer-vscode"
+            },
+            "spans": [
+              {
+                "traceId": "5b8aa5a2d2c872e8321cf37308d69df2",
+                "spanId": "051581bf3cb55c13",
+                "name": "order_enrichment",
+                "kind": 1,
+                "startTimeUnixNano": "1793022513171789223",
+                "endTimeUnixNano": "1793022518171789223",
+                "attributes": [
+                  {
+                    "key": "pipeline",
+                    "value": {
+                      "stringValue": "order_enrichment"
+                    }
+                  },
+                  {
+                    "key": "records_processed",
+                    "value": {
+                      "intValue": "12"
+                    }
+                  }
+                ],
+                "status": {
+                  "code": 1
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

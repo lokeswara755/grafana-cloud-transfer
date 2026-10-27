@@ -1,0 +1,17 @@
+{
+  "default_from": "now-15m",
+  "default_to": "now",
+  "queries": [
+    {
+      "name": "replace_with_real_query_name",
+      "enabled": false,
+      "datasource_uid": "REPLACE_WITH_SOURCE_DATASOURCE_UID",
+      "datasource_type": "prometheus",
+      "query": {
+        "refId": "A",
+        "expr": "REPLACE_WITH_REAL_PROMQL_OR_PLUGIN_QUERY",
+        "format": "time_series"
+      }
+    }
+  ]
+}

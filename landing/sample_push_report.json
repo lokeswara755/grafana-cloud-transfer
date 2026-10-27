@@ -1,0 +1,9 @@
+{
+  "run_at_utc": "2026-10-26T17:26:43.623336+00:00",
+  "mode": "sample",
+  "results": {
+    "metrics": "request failed: ConnectionError",
+    "logs": "request failed: ConnectionError",
+    "traces": "request failed: ConnectionError"
+  }
+}
